@@ -15,10 +15,10 @@ sources.line('first line');
 sources.openBlock('open');
 sources.line('second line');
 sources.closeBlock();
-sources.open('generic open [');
+sources.indent('generic open [');
 sources.line('boom');
 sources.line('bam');
-sources.close(']');
+sources.unindent(']');
 sources.closeFile('myfile.js');
 
 let yourfileRelativePath = './relative/subdirs/are/also/supported/yourfile.js';
@@ -51,10 +51,10 @@ sources.closeFile('rel/excluded.txt');
 sources.exclude('rel/excluded.txt');
 
 // returns a sorted list of output files
-let files = await sources.save('/tmp/source-files);
+let files = await sources.save('/tmp/source-files');
 ```
 
-`/tmp/source-files/myfile.js`:
+* /tmp/source-files/myfile.js:
 
 ```
 first line
@@ -67,7 +67,7 @@ generic open [
 ]
 ```
 
-`/tmp/source-files/relative/subdirs/are/also/supported/yourfile.js`:
+* /tmp/source-files/relative/subdirs/are/also/supported/yourfile.js:
 
 ```
 this is your file speaking
