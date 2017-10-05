@@ -11,11 +11,11 @@
     "type": "git",
     "url": "git://github.com/awslabs/node-codemaker"
   },
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && nodeunit dist/test/test.*.js",
+    "test": "npm run build && nodeunit test/test.*.js",
     "prepublish": "npm test"
   },
   "devDependencies": {

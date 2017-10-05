@@ -2,12 +2,18 @@ import * as util from 'util'
 import FileBuffer from './filebuff'
 import * as caseutils from './case-utils'
 
+/**
+ * Multi-file text writer with some code-generation features.
+ */
 export class CodeMaker {
     private currIndent = 0
     private currentFile?: FileBuffer
     private files = new Array<FileBuffer>();
     private readonly excludes = new Array<string>();
 
+    /**
+     * The indentation level of the file.
+     */
     indentation = 4
 
     /**

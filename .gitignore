@@ -1,5 +1,8 @@
 node_modules
-dist/
+*.js
+*.d.ts
+*.js.map
+
 
 # Created by https://www.gitignore.io/api/node
 
