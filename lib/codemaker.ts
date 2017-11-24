@@ -167,7 +167,10 @@ export class CodeMaker {
         return caseutils.toSnakeCase(s, sep);
     }
 
-    private makeIndent() {
+    /**
+     * Creates a string of space characters at the current indent level
+     */
+    makeIndent() {
         let spaces = ''
         for (let i = 0; i < this.currIndent; ++i) {
             for (let j = 0; j < this.indentation; ++j) {
